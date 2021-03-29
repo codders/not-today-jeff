@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
 
 $nextStartDate = strtotime("next Wednesday");
 $nextEndDate = strtotime("next Thursday");
