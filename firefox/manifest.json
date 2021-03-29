@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Not today, Jeff",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Reminds you not to use Jeff Bezos' e-commerce website on days when collective action is planned",
   "icons": {
     "48": "icons/jeff-48.png"

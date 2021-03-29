@@ -168,6 +168,14 @@
                 text-shadow: 0.1em 0.1em 0.1em rgb(49, 41, 61);
             }
 
+            p {
+                color: white;
+            }
+
+            p.info {
+                font-size: 1.7rem;
+            }
+
             .section-content {
                 margin: 2em;
                 display: -webkit-box;
@@ -187,38 +195,85 @@
             }
 
             section#why {
-                background: rgba(0, 47, 255, 0.8);
+                background: rgba(0, 31, 168, 0.8);
                 background: linear-gradient(
                     150deg,
-                    rgba(0, 47, 255, 0.8),
-                    rgba(0, 110, 255, 0.7)
+                    rgba(0, 31, 168, 0.8),
+                    rgba(0, 75, 173, 0.7)
                 );
             }
 
+            section#why .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                margin: 1em;
+                grid-gap: 1em;
+            }
+
+            .box {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                background-color: rgba(250, 250, 250, 0.8);
+                border: 0.1em solid rgb(49, 41, 61);
+                -webkit-box-shadow: 0.1em 0.1em 0.1em;           rgba(252, 252, 252, 0.8);
+                box-shadow: 0.1em 0.1em 0.1em rgba(252, 252, 252, 0.8);
+                border-radius: 0.2em;
+                font-size: 2em;
+                align-items: center;
+            }
+
+            .box p {
+                color: black;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
             section#how {
-                background: rgba(0, 110, 255, 0.7);
+                background: rgba(0, 75, 173, 0.7);
                 background: linear-gradient(
                     150deg,
-                    rgba(0, 110, 255, 0.7),
-                    rgba(108, 171, 253, 0.7)
+                    rgba(0, 75, 173, 0.7),
+                    rgba(29, 127, 255, 0.815)
                 );
             }
 
             section#when {
-                background: rgba(108, 171, 253, 0.7);
+                background: rgba(29, 127, 255, 0.815);
                 background: linear-gradient(
                     150deg,
-                    rgba(108, 171, 253, 0.7),
-                    rgba(199, 223, 255, 0.7)
+                    rgba(29, 127, 255, 0.815),
+                    rgb(91, 121, 255)
                 );
             }
+
+            section a,
+            section a:visited {
+                padding-bottom: 0.1em;
+                letter-spacing: 0.1em;
+                text-decoration: none;
+                border-bottom: rgb(49, 41, 61) solid 0.1em;
+                text-shadow: 0.1em 0.1em 0.1em rgb(49, 41, 61);
+                color: rgb(252, 252, 252);
+            }
+
+            section a:hover,
+            section a:active {
+                color: rgb(49, 41, 61);
+                border-bottom: rgb(49, 41, 61) solid 0.1em;
+            }
+
         </style>
     </head>
     <body>
         <header>
             <div class="header-content">
                 <h1>Not today, Jeff!</h1>
-                <h2>Coordinated Consumer Strikes against Amazon</h2>
+                <h2>Participate in Consumer Strikes against Amazon</h2>
                 <p><span id="time">??:??:??</span> until the next global Amazon strike</p>
                 <nav>
                     <a href="#why">Why?</a>
@@ -230,17 +285,48 @@
         </header>
         <section id="why">
             <div class="section-content">
-                <h1>Why?</h1>
+                <h1>Why Strike?</h1>
+                <p class="info">We are striking to protest:</p>
+                <div class="grid">
+                    <div class="box">
+                        <p>Amazon's destructive environmental impact</p>
+                    </div>
+                    <div class="box">
+                        <p>Amazon's disregard for workers' health</p>
+                    </div>
+                    <div class="box">
+                        <p>Amazon's anti-union policies and practices</p>
+                    </div>
+                    <div class="box">
+                        <p>Amazon's monopoly / monopsony power</p>
+                    </div>
+                    <div class="box">
+                        <p>The collapse of local, high-street businesses</p>
+                    </div>
+                    <div class="box">
+                        <p>Jeff Bezos' immoral level of wealth</p>
+                    </div>
+                </div>
+                <p class="info">Individual action is ineffective - we need to massive collective action, now!</p>
             </div>
         </section>
         <section id="how">
             <div class="section-content">
                 <h1>How?</h1>
+                <p class="info">Don't shop at Amazon on days when a strike is announced - it's that simple!</p>
+                <p class="info">Install a plugin for your browser to block Amazon's website on strike days:</p>
+                <div>
+                    <a href="https://addons.mozilla.org/addon/not-today-jeff/">
+                    <p><img src="/images/firefox.png" height="60"></p></a>
+                    <p><a href="https://addons.mozilla.org/addon/not-today-jeff/">Firefox Extension</a></p>
+                </div>
             </div>
         </section>
         <section id="when">
             <div class="section-content">
                 <h1>When?</h1>
+                <p class="info">To start with, every Wednesday.</p>
+                <p class="info">If there is interest, we can strike more often. We decide!</p>
             </div>
         </section>
         <script type="text/javascript">
