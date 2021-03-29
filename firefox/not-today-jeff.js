@@ -26,12 +26,12 @@ banner.appendChild(close);
 
 document.body.appendChild(banner);
 
-headline.style.height = "100%";
 headline.style.display = "table-cell";
-headline.style.verticalAlign = "middle";
+headline.style.verticalAlign = "bottom";
 headline.style.fontSize = "2rem";
 headline.style.fontWeight = "bold";
 headline.style.color = "white";
+headline.style.padding = "0.5rem";
 
 row1.style.display = "table-row";
 row2.style.display = "table-row";
@@ -49,14 +49,13 @@ close.style.padding = "5px 10px";
 closeButton.style.cursor = "pointer";
 
 banner.style.position = "fixed";
-banner.style.top = "0px";
+banner.style.top = "25%";
 banner.style.width = "100%";
 banner.style.zIndex = "9999";
 banner.style.background = "red";
-banner.style.height = "3.5rem";
+banner.style.height = "50%";
 banner.style.textAlign = "center";
 
 closeButton.onclick = function() {
-  console.log("Clicked!!");
   banner.remove();
 };
