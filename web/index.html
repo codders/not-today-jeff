@@ -2,6 +2,23 @@
     <head>
         <title>Not today, Jeff</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         <style>
             @import url("https://fonts.googleapis.com/css?family=Roboto");
             body {
@@ -30,7 +47,7 @@
                 background: linear-gradient(
                     150deg,
                     rgba(255, 5, 26, 0.8),
-                    rgba(0, 0, 0, 0.7)
+                    rgba(0, 0, 0, 1)
                 );
             }
 
@@ -83,6 +100,114 @@
                 color: rgb(49, 41, 61);
                 border-bottom: rgb(49, 41, 61) solid 0.1em;
             }
+
+            nav {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                font-family: "Anton", sans-serif;
+                text-transform: uppercase;
+                font-weight: 400;
+                color: rgb(49, 41, 61);
+                font-size: 1.4em;
+                margin: 2em;
+            }
+
+            nav a {
+                margin: 1em;
+            }
+
+            nav a,
+            nav a:visited {
+                padding-bottom: 0.1em;
+                letter-spacing: 0.1em;
+                text-decoration: none;
+                border-bottom: rgb(49, 41, 61) solid 0.1em;
+                text-shadow: 0.1em 0.1em 0.1em rgb(49, 41, 61);
+                color: rgb(252, 252, 252);
+            }
+
+            nav a:hover,
+            nav a:active {
+                color: rgb(49, 41, 61);
+                border-bottom: rgb(49, 41, 61) solid 0.1em;
+            }
+
+            section {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+                width: 100%;
+            }
+
+            section h1 {
+                text-transform: uppercase;
+                font-size: 4.8em;
+                color: rgb(252, 252, 252);
+                font-weight: 400;
+                text-shadow: 0.1em 0.1em 0.1em rgb(49, 41, 61);
+            }
+
+            .section-content {
+                margin: 2em;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            section#why {
+                background: rgba(0, 47, 255, 0.8);
+                background: linear-gradient(
+                    150deg,
+                    rgba(0, 47, 255, 0.8),
+                    rgba(0, 110, 255, 0.7)
+                );
+            }
+
+            section#how {
+                background: rgba(0, 110, 255, 0.7);
+                background: linear-gradient(
+                    150deg,
+                    rgba(0, 110, 255, 0.7),
+                    rgba(108, 171, 253, 0.7)
+                );
+            }
+
+            section#when {
+                background: rgba(108, 171, 253, 0.7);
+                background: linear-gradient(
+                    150deg,
+                    rgba(108, 171, 253, 0.7),
+                    rgba(199, 223, 255, 0.7)
+                );
+            }
         </style>
     </head>
     <body>
@@ -90,9 +215,29 @@
             <div class="header-content">
                 <h1>Not today, Jeff!</h1>
                 <h2>Coordinated Consumer Strikes against Amazon</h2>
-                <p><span id="time">??:??:??</span> until the next global Amazon strike</p>        
+                <p><span id="time">??:??:??</span> until the next global Amazon strike</p>
+                <nav>
+                    <a href="#why">Why?</a>
+                    <a href="#how">How?</a>
+                    <a href="#when">When?</a>
+                </nav>
             </div>
         </header>
+        <section id="why">
+            <div class="section-content">
+                <h1>Why?</h1>
+            </div>
+        </section>
+        <section id="how">
+            <div class="section-content">
+                <h1>How?</h1>
+            </div>
+        </section>
+        <section id="when">
+            <div class="section-content">
+                <h1>When?</h1>
+            </div>
+        </section>
         <script type="text/javascript">
             var startDate;
             var endDate;
