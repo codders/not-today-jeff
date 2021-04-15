@@ -101,7 +101,8 @@
                 border-bottom: rgb(49, 41, 61) solid 0.1em;
             }
 
-            header p.quote {
+            p.quote {
+                padding-top: 4rem;
                 font-size: 1em;
             }
 
@@ -174,6 +175,12 @@
 
             p.info {
                 font-size: 1.7rem;
+            }
+
+            div.addon {
+              float: left;
+              padding-left: 0.5rem;
+              padding-right: 0.5rem;
             }
 
             .section-content {
@@ -277,13 +284,12 @@
             <div class="header-content">
                 <h1>Not today, Jeff!</h1>
                 <h2>Participate in Consumer Strikes against Amazon</h2>
-                <p><span id="time">??:??:??</span> until the next global Amazon strike</p>
+                <p><span id="time">??:??:??</span> <span id="strike_text">until the next global Amazon strike</span></p>
                 <nav>
                     <a href="#why">Why?</a>
                     <a href="#how">How?</a>
                     <a href="#when">When?</a>
                 </nav>
-                <p class="quote">&quot;The ultimate, hidden truth of the world is that it is something that we make, and could just as easily make differently.&quot; &mdash; David Graeber</p>
             </div>
         </header>
         <section id="why">
@@ -311,6 +317,7 @@
                     </div>
                 </div>
                 <p class="info">Individual action is ineffective - we need to massive collective action, now!</p>
+                <p class="info">More discussion of the motivation for the strike can be found <a href="discussion.html">here</a></p>
             </div>
         </section>
         <section id="how">
@@ -319,20 +326,28 @@
                 <p class="info">Don't shop at Amazon on days when a strike is announced - it's that simple!</p>
                 <p class="info">Install a plugin for your browser to block Amazon's website on strike days:</p>
                 <div>
-                    <a href="https://addons.mozilla.org/addon/not-today-jeff/">
-                    <p><img src="/images/firefox.png" height="60"></p></a>
-                    <p><a href="https://addons.mozilla.org/addon/not-today-jeff/">Firefox Extension</a></p>
+                  <div class="addon">
+                      <a href="https://addons.mozilla.org/addon/not-today-jeff/">
+                      <p><img src="/images/firefox.png" height="60"></p></a>
+                      <p><a href="https://addons.mozilla.org/addon/not-today-jeff/">Firefox Extension</a></p>
+                  </div>
+                  <div class="addon">
+                      <a href="https://chrome.google.com/webstore/detail/not-today-jeff/hoaklogpjjgebkaipdfgdhmepkldckdb">
+                      <p><img src="/images/chrome.png" height="60"></p></a>
+                      <p><a href="https://chrome.google.com/webstore/detail/not-today-jeff/hoaklogpjjgebkaipdfgdhmepkldckdb">Chrome Extension</a></p>
+                  </div>
                 </div>
                 <div>
-                    <p><a href="https://github.com/codders/not-today-jeff"><img src="/images/GitHub-Mark-64px.png" height="20" class="github">Source code</a></p>
+                    <p><a href="https://github.com/codders/not-today-jeff"><img src="/images/GitHub-Mark-64px.png" height="20" class="github">Source code</a> | <a href="/support.html">Support</a> | <a href="/privacy.html">Privacy</a></p>
                 </div>
             </div>
         </section>
         <section id="when">
             <div class="section-content">
                 <h1>When?</h1>
-                <p class="info">To start with, every Wednesday.</p>
+                <p class="info">Every Wednesday.</p>
                 <p class="info">If there is interest, we can strike more often. We decide together!</p>
+                <p class="quote">&quot;The ultimate, hidden truth of the world is that it is something that we make, and could just as easily make differently.&quot; &mdash; David Graeber</p>
             </div>
         </section>
         <script type="text/javascript">
@@ -362,8 +377,16 @@
                     document.getElementById("time").textContent = hourPart + " hour" + plural(hourPart) + " " + 
                         pad(minutePart) + " minute" + plural(minutePart) + " " + 
                         pad(secondPart) + " second" + plural(secondPart);
+                    document.getElementById("strike_text").textContent = "until the next global Amazon strike!";
                 } else {
-                    document.getElementById("time").textContent = "no time";
+                    var seconds = Math.floor((endDate - new Date())/1000);
+                    var secondPart = seconds % 60;
+                    var minutePart = Math.floor(seconds / 60) % 60;
+                    var hourPart = Math.floor(seconds / 60 / 60);
+                    document.getElementById("time").textContent = hourPart + " hour" + plural(hourPart) + " " + 
+                        pad(minutePart) + " minute" + plural(minutePart) + " " + 
+                        pad(secondPart) + " second" + plural(secondPart);
+                    document.getElementById("strike_text").textContent = "until today's strike ends";
                 }
                 setTimeout(updateTime, 1000);
             }
